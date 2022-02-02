@@ -1,3 +1,10 @@
+const express = require('express');
+const app = express();
+const port = 3000;
+ app.get('/', (req, res) => 
+ res.send('<h1>BOT IS ALIVE !</h1>'));
+ app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+
 //import the Discord Library
 const Discord = require("discord.js");
 const colors = require("colors");
@@ -38,7 +45,7 @@ client.jointocreatemap = new Enmap({
 require(`./modules/cmds`)(client);
 require(`./modules/jointocreate`)(client);
 //login to the BOT
-client.login(config.token);
+client.login(process.env[Token]);
 /**
  * @INFO
  * Bot Coded by Tomato#6966 | https://github.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
