@@ -45,7 +45,7 @@ client.jointocreatemap = new Enmap({
 require(`./modules/cmds`)(client);
 require(`./modules/jointocreate`)(client);
 //login to the BOT
-client.login(process.env.token]);
+client.login(process.env.token);
 /**
  * @INFO
  * Bot Coded by Tomato#6966 | https://github.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
