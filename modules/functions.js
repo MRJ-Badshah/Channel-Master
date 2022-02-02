@@ -18,7 +18,7 @@ client.settings2.ensure(guildid, {
 });
 client.settings3.ensure(guildid, {
     channel: "",
-    channelname: "🎤︱{user},
+    channelname: "🎤︱{user}",
     guild: guildid,
 });
 }
