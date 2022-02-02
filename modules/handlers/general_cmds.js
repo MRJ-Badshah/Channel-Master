@@ -60,7 +60,7 @@ module.exports = (client, message, args, cmd, prefix) => {
           .addField("\u200b", `\u200b`, true)
           .addField("💻 Platform", `\`\`${os.platform()}\`\``, true)
           .addField("API Latency", `\`${client.ws.ping}ms\``, true)
-          .setFooter("Redesign by:    MBL");
+          .setFooter("Redesign by: MBL Team");
         message.channel.send(botinfo);
 
       } catch {
@@ -86,7 +86,7 @@ module.exports = (client, message, args, cmd, prefix) => {
           .addField("\u200b", `\u200b`, true)
           .addField("💻 Platform", `\`\`${os.platform()}\`\``, true)
           .addField("API Latency", `\`${client.ws.ping}ms\``, true)
-          .setFooter("Redesign by:    MBL Team");
+          .setFooter("Redesign by:MBL Team");
         message.channel.send(botinfo);
       }
     }).catch(console.error);
