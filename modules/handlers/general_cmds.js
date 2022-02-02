@@ -18,13 +18,13 @@ module.exports = (client, message, args, cmd, prefix) => {
       .setDescription(`PONG! \`${client.ws.ping} ms\``)
       .setFooter(ee.footertext, ee.footericon)
     )
-  } else if (cmd === "support" || cmd === "server" || cmd === "tutorial" || cmd === "video") {
+  } else if (cmd === "support" || cmd === "server") {
     message.reply(
       new Discord.MessageEmbed()
       .setColor(ee.color)
       .setFooter(ee.footertext, ee.footericon)
-      .setAuthor(`${client.user.username} Support`, client.user.displayAvatarURL(), "https://milrato.eu")
-      .setDescription("[\`Join to Support Server\`](https://discord.gg/wvCp7q88G3) to gain help! OR watch the [Tutorial Video](https://youtu.be/zNE8insVgOA)")
+      .setAuthor(`${client.user.username} Support`, client.user.displayAvatarURL(), "https://dsc.gg/mblxking")
+      .setDescription("[\`Join to Support Server\`](https://dsc.gg/mblxking) to gain help!")
     )
     return;
   } else if (cmd === "info" || cmd === "stats" || cmd === "stat") {
@@ -60,7 +60,7 @@ module.exports = (client, message, args, cmd, prefix) => {
           .addField("\u200b", `\u200b`, true)
           .addField("💻 Platform", `\`\`${os.platform()}\`\``, true)
           .addField("API Latency", `\`${client.ws.ping}ms\``, true)
-          .setFooter("Coded by:    Tomato#6966");
+          .setFooter("Redesign by:    MBL");
         message.channel.send(botinfo);
 
       } catch {
@@ -86,7 +86,7 @@ module.exports = (client, message, args, cmd, prefix) => {
           .addField("\u200b", `\u200b`, true)
           .addField("💻 Platform", `\`\`${os.platform()}\`\``, true)
           .addField("API Latency", `\`${client.ws.ping}ms\``, true)
-          .setFooter("Coded by:    Tomato#6966");
+          .setFooter("Redesign by:    MBL Team");
         message.channel.send(botinfo);
       }
     }).catch(console.error);
@@ -116,25 +116,10 @@ module.exports = (client, message, args, cmd, prefix) => {
   } else if (cmd === "add" || cmd === "invite") {
     return message.reply(new Discord.MessageEmbed()
       .setColor(ee.color)
-      .setURL("https://discord.com/api/oauth2/authorize?client_id=761247967859965982&permissions=8&scope=bot")
+      .setURL("https://discord.com/api/oauth2/authorize?client_id=918118752015503360&permissions=8&scope=bot")
       .setTitle("❤ | Thanks for every invite!")
-      .setDescription(`[Click here to invite me, thanks](https://discord.com/api/oauth2/authorize?client_id=761247967859965982&permissions=8&scope=bot)`)
+      .setDescription(`[Click here to invite me, thanks](https://discord.com/api/oauth2/authorize?client_id=918118752015503360&permissions=8&scope=bot)`)
       .setFooter(ee.footertext, ee.footericon)
     )
-  } else if (cmd === "source" || cmd === "github") {
-    message.reply(
-      new Discord.MessageEmbed()
-      .setColor(ee.color)
-      .setFooter(ee.footertext, ee.footericon)
-      .setAuthor(`${client.user.username}'s' Source Code`, client.user.displayAvatarURL(), "https://milrato.eu")
-      .setTitle(`This Bot is made by \`Tomato#6966\` and **this** is the Source Code link to this Bot`)
-      .setURL("https://github.com/Milrato-Development/Channel-Master")
-      .addField("Discord.js: ", "[\`v12.5.1\`](https://discord.js.org)", true)
-      .addField("Node.js: ", "[\`v15.3.4\`](https://nodejs.org/en/)", true)
-      .addField("Enmap: ", "[\`v5.8.4\`](https://enmap.evie.dev/api)", true)
-      .addField("Source Code. ", "Don't just use the source for yourself,... please [invite](https://discord.com/api/oauth2/authorize?client_id=761247967859965982&permissions=8&scope=bot) me too![\`Click here\`](https://github.com/Milrato-Development/Channel-Master)")
-
-    )
-    return;
   }
 }
