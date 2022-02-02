@@ -8,17 +8,17 @@ function databasing (guildid, client) {
 client.settings.ensure(guildid, {
     prefix: ".",
     channel: "",
-    channelname: "{user}' Room",
+    channelname: "🎤︱{user}",
     guild: guildid,
 });
 client.settings2.ensure(guildid, {
     channel: "",
-    channelname: "{user}' Channel",
+    channelname: "🎤︱{user}",
     guild: guildid,
 });
 client.settings3.ensure(guildid, {
     channel: "",
-    channelname: "{user}' Lounge",
+    channelname: "🎤︱{user},
     guild: guildid,
 });
 }
@@ -27,17 +27,17 @@ function reset_DB(guildid, client) {
 client.settings.set(guildid, {
     prefix: ".",
     channel: "",
-    channelname: "{user}' Room",
+    channelname: "🎤︱{user}",
     guild: guildid,
 });
 client.settings2.set(guildid, {
     channel: "",
-    channelname: "{user}' Channel",
+    channelname: "🎤︱{user}",
     guild: guildid,
 });
 client.settings3.set(guildid, {
     channel: "",
-    channelname: "{user}' Lounge",
+    channelname: "🎤︱{user}",
     guild: guildid,
 });
 }
@@ -95,7 +95,7 @@ function create_join_to_create_Channel(client, user, type) {
 if (type == 1) chname = client.settings.get(user.member.guild.id, "channelname")
 else if (type == 2) chname = client.settings2.get(user.member.guild.id, "channelname")
 else if (type == 3) chname = client.settings3.get(user.member.guild.id, "channelname")
-else chname = "{user}'s Room"
+else chname = "🎤︱{user}"
 //CREATE THE CHANNEL
 let allowed = true;
 if (!user.guild.me.hasPermission("MANAGE_CHANNELS")) {
